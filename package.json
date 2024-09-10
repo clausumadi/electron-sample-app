@@ -1,5 +1,5 @@
 {
-  "name": "electron-sample-app",
+  "name": "electron-delta-sample-app",
   "version": "2.0.8",
   "description": "A minimal Electron application",
   "main": "src/main.js",

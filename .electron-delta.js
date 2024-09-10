@@ -2,7 +2,11 @@
 const DeltaBuilder = require("@electron-delta/builder");
 
 const path = require("path");
-const getPreviousReleases = require("./build_scripts/get-previous-releases");
+// const getPreviousReleases = require("./build_scripts/get-previous-releases"); // OJOOJO!! comentado
+
+const getPreviousReleases = async () => { // OJOOJO! nuevo
+  return [];
+};
 
 const options = {
   productIconPath: path.join(__dirname, "icon.ico"),
