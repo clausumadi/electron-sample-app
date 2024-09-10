@@ -6,9 +6,9 @@
   "scripts": {
     "start": "electron .",
     "pack": "electron-builder --dir",
-    "dist:mac": "electron-builder --mac",
+    "dist:mac": "electron-builder --mac --arm64 --x64",
     "dist:win": "electron-builder --win",
-    "dist": "electron-builder --win --mac --x64",
+    "dist": "electron-builder --win --mac --arm64 --x64",
     "release": "electron-builder --win --mac --x64 --publish=always",
     "release:win": "electron-builder --win --x64 --publish=always",
     "release:mac": "electron-builder --mac --x64 --publish=always"
@@ -38,13 +38,15 @@
         {
           "target": "zip",
           "arch": [
-            "x64"
+            "x64",
+            "arm64"
           ]
         },
         {
           "target": "dmg",
           "arch": [
-            "x64"
+            "x64",
+            "arm64"
           ]
         }
       ],
@@ -87,8 +89,15 @@
     },
     "win": {
       "target": [
-        "nsis-web"
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
       ],
+      "requestedExecutionLevel": "requireAdministrator",
       "publish": [
         {
           "provider": "github"
