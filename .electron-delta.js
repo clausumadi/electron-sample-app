@@ -4,8 +4,17 @@ const DeltaBuilder = require("@electron-delta/builder");
 const path = require("path");
 // const getPreviousReleases = require("./build_scripts/get-previous-releases"); // OJOOJO!! comentado
 
+// const getPreviousReleases = async () => { // OJOOJO! nuevo
+//   return [];
+// };
+
 const getPreviousReleases = async () => { // OJOOJO! nuevo
-  return [];
+  return [
+    {
+      version: '1.0.0',
+      url: 'http://localhost:5123/electron-sample-app-1.0.0.exe',
+    }
+  ];
 };
 
 const options = {
