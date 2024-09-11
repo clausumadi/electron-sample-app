@@ -12,7 +12,7 @@ const getPreviousReleases = async () => { // OJOOJO! nuevo
   return [
     {
       version: '1.0.0',
-      url: 'http://localhost:5123/electron-sample-app-1.0.0.exe',
+      url: 'http://localhost:5123/electron-delta-sample-app-1.0.0.exe',
     }
   ];
 };
