@@ -11,6 +11,10 @@ const path = require("path");
 const getPreviousReleases = async () => { // OJOOJO! nuevo
   return [
     {
+      version: '1.0.1',
+      url: 'http://localhost:5123/electron-delta-sample-app-1.0.1.exe',
+    },
+    {
       version: '1.0.0',
       url: 'http://localhost:5123/electron-delta-sample-app-1.0.0.exe',
     }
